@@ -1,8 +1,8 @@
 /.idea/
 
-db.sqlite
-
 /data/*
 /vendor
+
+.env
 
 !.gitkeep

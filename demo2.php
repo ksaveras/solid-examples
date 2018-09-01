@@ -5,8 +5,12 @@ use App\Service\V1\WeatherUpdateService;
 use App\Weather\CachedWeatherProvider;
 use App\Weather\OpenWeatherProvider;
 use Symfony\Component\Cache\Adapter\PhpFilesAdapter;
+use Symfony\Component\Dotenv\Dotenv;
 
 require_once __DIR__.'/bootstrap.php';
+
+$dotEnv = new Dotenv();
+$dotEnv->load(__DIR__.'/.env');
 
 $config = [
     'cache' => [
@@ -16,7 +20,7 @@ $config = [
     ],
     'openWeather' => [
         'url' => 'http://api.openweathermap.org/data/2.5/weather?q=%LOCATION%&units=metric&appid=%APIKEY%',
-        'apikey' => '64a9a0d304ce60d730cf08ebb378fa27',
+        'apikey' => $_ENV['OPEN_WEATHER_API'],
     ],
 ];
 
