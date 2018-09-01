@@ -1,7 +1,8 @@
-!.gitkeep
 /.idea/
 
 db.sqlite
 
 /data/*
 /vendor
+
+!.gitkeep
