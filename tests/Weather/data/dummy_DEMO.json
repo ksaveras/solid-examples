@@ -1,0 +1,8 @@
+{
+    "name": "dummy",
+    "main": {
+        "temp": 20,
+        "humidity": 77,
+        "pressure": 1100
+    }
+}
