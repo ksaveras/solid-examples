@@ -10,7 +10,7 @@ $config = Setup::createAnnotationMetadataConfiguration([__DIR__.'/src/Entity'], 
 
 $conn = [
     'driver' => 'pdo_sqlite',
-    'path' => __DIR__.'/db.sqlite',
+    'path' => __DIR__.'/data/db.sqlite',
 ];
 
 $entityManager = EntityManager::create($conn, $config);
