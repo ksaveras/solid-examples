@@ -25,6 +25,7 @@ class WeatherUpdateServiceTest extends TestCase
         $weatherProvider = $this->createMock(WeatherProviderInterface::class);
         $weatherProvider->expects($this->once())
             ->method('getWeatherInfo')
+            ->with($location)
             ->willReturn($entity);
 
         $weatherManager = $this->createMock(WeatherManager::class);
