@@ -9,6 +9,9 @@ use App\Entity\WeatherInfo;
  */
 class OpenWeatherProvider implements WeatherProviderInterface
 {
+    public const VAR_LOCATION = '%LOCATION%';
+    public const VAR_APIKEY = '%APIKEY%';
+
     /**
      * @var string
      */
@@ -55,8 +58,8 @@ class OpenWeatherProvider implements WeatherProviderInterface
     {
         return str_replace(
             [
-                '%LOCATION%',
-                '%APIKEY%',
+                static::VAR_LOCATION,
+                static::VAR_APIKEY,
             ],
             [
                 $location,
