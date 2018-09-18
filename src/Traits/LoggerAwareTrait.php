@@ -10,10 +10,7 @@ use Psr\Log\NullLogger;
  */
 trait LoggerAwareTrait
 {
-    /**
-     * @var LoggerInterface
-     */
-    protected $logger;
+    use \Psr\Log\LoggerAwareTrait;
 
     /**
      * @return LoggerInterface
@@ -25,17 +22,5 @@ trait LoggerAwareTrait
         }
 
         return $this->logger;
-    }
-
-    /**
-     * @param LoggerInterface $logger
-     *
-     * @return $this
-     */
-    public function setLogger(LoggerInterface $logger): self
-    {
-        $this->logger = $logger;
-
-        return $this;
     }
 }
